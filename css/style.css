@@ -1,0 +1,59 @@
+.importante{
+	margin-top: 50px;
+	background-color: #BBBBBB;
+}
+.importante h4{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #007BFF;
+	text-align: center;
+}
+.importante p{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	text-align: justify;
+}
+.contato{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.contato h4{
+	color: #007BFF;
+	padding-left: 20px;
+	text-align: center;
+}
+.contato h5{
+	padding-left: 10px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	padding-left: 120px;
+}
+.sobre h4{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	color: #007BFF;
+}
+.sobre h5{
+	padding-bottom: 10px;
+	padding-top: 20px;
+	color: #007BFF;
+}
+.sobre p{
+	text-align: justify;
+}
+.duvidas h4{
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	color: #007BFF;
+}
+.duvidas h5{
+	padding-bottom: 10px;
+	padding-top: 20px;
+	color: #007BFF;
+}
+.duvidas p{
+	text-align: justify;
+}

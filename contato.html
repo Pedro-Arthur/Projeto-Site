@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Contato - Nerd Blog</title>
+	<meta name="Site pensado em nerds que curtem conteúdo de jogos, músicas, filmes e livros." content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/carousel.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/v4-shims.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="index.html">Nerd Blog</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="contato.html">Contato <span class="sr-only">(atual)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sobre.html">Sobre</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="duvidas.html">Dúvidas</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Conteúdo
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Jogos</a>
+							<a class="dropdown-item" href="#">Filmes</a>
+							<a class="dropdown-item" href="#">Músicas</a>
+							<a class="dropdown-item" href="#">Livros</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Saiba mais...</a>
+						</div>
+					</li>
+				</ul>
+				<form class="form-inline mt-2 mt-md-0">
+					<input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Pesquisar">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<div class="contato">
+		<h4>Contate-nos abaixo</h4>
+		<h5>Preencha os dados corretamente</h5>
+	</div>
+	<div class="container">
+		<form method="post" action="contato.php" onsubmit="return valida_dados(this)">
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Nome completo</label>
+				<input type="text" class="form-control" name="nome" id="exampleFormControlInput1" placeholder="Nome completo aqui">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Endereço de email</label>
+				<input type="text" class="form-control" name="email" id="exampleFormControlInput1" placeholder="Endereço de email aqui">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Assunto</label>
+				<input type="text" class="form-control" name="assunto" id="exampleFormControlInput1" placeholder="Assunto aqui">
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Mensagem</label>
+				<textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+	</div>
+
+	<script>
+		function valida_dados(nomeform){
+			if (nomeform.nome.value == ""){
+				alert("Por favor, preencha o campo nome.");
+				return false;
+			}
+			if (nomeform.email.value == ""){
+				alert("Por favor, preencha o campo email.");
+				return false;
+			}
+			if (nomeform.assunto.value == ""){
+				alert("Por favor, preencha o campo assunto.");
+				return false;
+			}
+			if (nomeform.mensagem.value == ""){
+				alert("Por favor, preencha o campo mensagem.");
+				return false;
+			}
+			if (nomeform.email.value="" || nomeform.email.value.indexOf("@") == -1 || nomeform.email.value.indexOf('.') == -1)
+			{
+				alert("E-mail inválido.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/46a40cdd8f.js" crossorigin="anonymous"></script>
+
+	<footer class="container border-top mt-5 py-5">
+		<div class="row">
+			<div class="col-12 col-md">
+				<h4><span class="fa fa-plane"></span></h4>
+				<p class="text-muted">&copy 2020 Nerd Blog - Todos os direitos reservados</p>
+			</div>
+			<div class="col-6 col-md">
+				<h4>About</h4>
+				<ul class="list-unstyled">
+					<li><a href="#" class="text-muted">Lorem</a></li>
+					<li><a href="#" class="text-muted">Lorem ipsum</a></li>
+					<li><a href="#" class="text-muted">Lorem ipsum dolor</a></li>
+					<li><a href="#" class="text-muted">Lorem ipsum</a></li>
+					<li><a href="#" class="text-muted">Lorem</a></li>
+				</ul>
+			</div>
+			<div class="col-6 col-md">
+				<h4>Follow Us</h4>
+				<a href="#" class="text-muted"><span class="fab fa-twitter"></span></a>
+				<a href="#" class="text-muted"><span class="fab fa-facebook"></span></a>
+				<a href="#" class="text-muted"><span class="fab fa-youtube"></span></a>
+				<a href="#" class="text-muted"><span class="fab fa-linkedin"></span></a>
+				<a href="#" class="text-muted"><span class="fab fa-instagram"></span></a>
+			</div>
+			<div class="col-6 col-md">
+				<h4>Subscribe</h4>
+				<input type="email" class="form-control" placeholder="Seu email aqui">
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
